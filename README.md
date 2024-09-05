@@ -24,7 +24,7 @@ Experimental results demonstrate that our approach improves mAP and NDS by 5.1 p
 **1. Create a conda virtual environment**
 ```
 conda create --name labeldistill python=3.8 -y
-conda activate p2d
+conda activate labeldistill
 ```
 
 **2. Install PyTorch (v1.9.0)**
