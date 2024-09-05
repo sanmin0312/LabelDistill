@@ -80,7 +80,7 @@ python scripts/gen_depth_gt.py
 
 The directory should be as follows.
 ```
-P2D
+LabelDistill
 ├── data
 │   ├── nuScenes
 │   │   ├── nuscenes_infos_train.pkl
