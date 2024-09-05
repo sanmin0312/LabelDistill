@@ -105,12 +105,11 @@ python [EXP_PATH] --ckpt_path [CKPT_PATH] -e -b 4 --gpus 4
 ```
 
 # Model Zoo
-| Model | Backbone | Weight | mAP | NDS |
+| Model | Backbone | Weight | Config | mAP | NDS |
 | - | - | - | - | - |
-| CenterPoint | - | [link](https://drive.google.com/file/d/1YWasvUGLQyI0FtruVsMmzQ2TNtBNV7Ad/view?usp=drive_link) | 58.4 | 65.2 |
-| LabelDistill | ResNet-50 | [link](https://drive.google.com/file/d/1O-pTtZhcx0ZQX733QDjY9eHM0BAXm6dU/view?usp=drive_link) | 41.9 | 52.8 |
-| Label Encoder | - | [link](https://drive.google.com/file/d/1FAzc2RAZQNM3dyv-nNbpWNkxHyGt1ujc/view?usp=drive_link) | - | - |
-
+| CenterPoint | - | [link](https://drive.google.com/file/d/1YWasvUGLQyI0FtruVsMmzQ2TNtBNV7Ad/view?usp=drive_link) | - | 58.4 | 65.2 |
+| LabelDistill | ResNet-50 | [link](https://drive.google.com/file/d/1O-pTtZhcx0ZQX733QDjY9eHM0BAXm6dU/view?usp=drive_link) | [config](labeldistill/exps/nuscenes/labeldistill/LabelDistill_r50_128x128_e24_4key.py) | 41.9 | 52.8 |
+| Label Encoder | - | [link](https://drive.google.com/file/d/1FAzc2RAZQNM3dyv-nNbpWNkxHyGt1ujc/view?usp=drive_link) | [config](labeldistill/exps/nuscenes/labeldistill/LabelDistill_step1.py) | - | - |
 # Citation
 ```
 @inproceedings{kim2024labeldistill,
