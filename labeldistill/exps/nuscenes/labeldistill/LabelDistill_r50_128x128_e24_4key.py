@@ -1,27 +1,4 @@
 # Copyright (c) Megvii Inc. All rights reserved.
-"""
-AP: 0.4024
-mATE: 0.5958
-mASE: 0.2624
-mAOE: 0.3932
-mAVE: 0.3664
-mAAE: 0.2175
-NDS: 0.5177
-Eval time: 64.2s
-
-Per-class results:
-Object Class            AP      ATE     ASE     AOE     AVE     AAE
-car                     0.601   0.430   0.152   0.080   0.354   0.205
-truck                   0.370   0.567   0.189   0.091   0.328   0.202
-bus                     0.437   0.565   0.177   0.066   0.788   0.300
-trailer                 0.210   0.953   0.245   0.265   0.253   0.186
-construction_vehicle    0.092   0.920   0.489   1.172   0.142   0.409
-pedestrian              0.376   0.687   0.283   0.725   0.395   0.230
-motorcycle              0.415   0.566   0.254   0.458   0.498   0.200
-bicycle                 0.382   0.450   0.252   0.563   0.173   0.008
-traffic_cone            0.557   0.425   0.320   nan     nan     nan
-barrier                 0.584   0.395   0.264   0.118   nan     nan
-"""
 from labeldistill.exps.base_cli import run_cli
 from labeldistill.exps.nuscenes.base_exp import \
     LabelDistillModel as BaseLabelDistillModel
@@ -322,12 +299,12 @@ class LabelDistillModel(BaseLabelDistillModel):
 
     def configure_optimizers(self):
         optimizer = build_optimizer(self.model, self.optimizer_config)
-        scheduler = MultiStepLR(optimizer, [26, 29])
+        scheduler = MultiStepLR(optimizer, [19, 23])
         return [[optimizer], [scheduler]]
 
 
 if __name__ == '__main__':
     run_cli(LabelDistillModel,
-            'LabelDistill_r50_128x128_e30_4key',
+            'LabelDistill_r50_128x128_e24_4key',
             extra_trainer_config_args={'epochs': 30},
             use_ema=True)
