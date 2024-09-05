@@ -122,3 +122,4 @@ python [EXP_PATH] --ckpt_path [CKPT_PATH] -e -b 4 --gpus 4
 # Acknowledgement
 - [BEVDepth](https://github.com/Megvii-BaseDetection/BEVDepth)
 - [mmdet3d](https://github.com/open-mmlab/mmdetection3d)
+- [CenterPoint](https://github.com/open-mmlab/mmdetection3d/tree/main/configs/centerpoint)
