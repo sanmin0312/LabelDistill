@@ -185,8 +185,8 @@ def main():
     #######################################################################
     train_infos = generate_info(trainval_nusc, train_scenes)
     val_infos = generate_info(trainval_nusc, val_scenes)
-    mmcv.dump(train_infos, './data/nuScenes/nuscenes_infos_train2.pkl')
-    mmcv.dump(val_infos, './data/nuScenes/nuscenes_infos_val2.pkl')
+    mmcv.dump(train_infos, './data/nuScenes/nuscenes_infos_train.pkl')
+    mmcv.dump(val_infos, './data/nuScenes/nuscenes_infos_val.pkl')
     #######################################################################
 
 
